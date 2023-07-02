@@ -369,8 +369,22 @@
 
           <div class="col-lg-6 col-md-6" data-aos="zoom-in" data-aos-delay="300">
             <div class="box">
-              <h3 style="color: #65c600;">Test Series(One-time Payment)</h3>
-              <div class="price"><sup>₹</sup>499<span> </span></div>
+              
+              <h3 style="color: #65c600;">Test Series(Early Bird Offer)<div id="timer"></div>
+                <script>
+                var deadline = new Date("2023-07-10T00:00:00");
+                var timer = document.getElementById("timer");
+                var interval = setInterval(function() {
+                  var now = new Date();
+                  var remaining = deadline - now;
+                  var days = Math.floor(remaining / (1000 * 60 * 60 * 24));
+                  var hours = Math.floor((remaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                  var minutes = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
+                  var seconds = Math.floor((remaining % (1000 * 60)) / 1000);
+                  timer.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+                }, 1000);
+                </script></h3>
+              <div class="price"><sup>₹</sup>499<span> One Time</span></div>
               <img src="assets/img/pricing-business.png" class="img-fluid" alt="Consultalk">
               <ul>
                 <li>Most Relevent & Affordable</li>
